@@ -12,6 +12,14 @@ import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactor
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.RedisSerializationContext.SerializationPair;
 
+/*
+ * The RedisCache created via RedisCacheManager is governed by the RedisCacheConfiguration, 
+ * which enables you to specify key expiration times (TTL), 
+ * RedisSerializer implementations to convert between the binary storage format and other formats.
+ * The example below illustrates how this can be achieved:
+ * 
+ * */
+
 @Configuration
 public class RedisConfig {
 	
